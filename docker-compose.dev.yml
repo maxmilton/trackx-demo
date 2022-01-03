@@ -1,0 +1,90 @@
+services:
+  nginx:
+    image: nginx:1
+    container_name: trackx-demo-nginx
+    network_mode: 'host'
+    cap_drop:
+      - ALL
+    cap_add:
+      - CHOWN
+      - SETUID
+      - SETGID
+      - NET_BIND_SERVICE
+    read_only: true
+    tmpfs:
+      - /var/cache/nginx:rw,noexec,nodev,nosuid,size=56m
+      - /var/run:rw,noexec,nodev,nosuid,size=64k
+    volumes:
+      - type: bind
+        source: ../trackx/packages/trackx-api/nginx/conf
+        target: /etc/nginx/conf
+        read_only: true
+      - type: bind
+        source: ../trackx/packages/trackx-api/nginx/mime.types
+        target: /etc/nginx/mime.types
+        read_only: true
+      - type: bind
+        source: ./nginx/dev/nginx.conf
+        target: /etc/nginx/nginx.conf
+        read_only: true
+      - type: bind
+        source: ./nginx/dev/default.conf
+        target: /etc/nginx/conf.d/default.conf
+        read_only: true
+      - type: bind
+        source: ./dist/var/dash
+        target: /usr/share/nginx/html
+        read_only: true
+    stop_grace_period: 30s
+
+  api:
+    build:
+      context: ./dist/api
+      dockerfile: ../Dockerfile
+    image: trackx-demo-api
+    command: /bin/sh -ec "/usr/bin/node plugin.js init && /usr/bin/node server.js"
+    init: true # forward kill signals to subprocesses
+    depends_on:
+      - nginx
+    container_name: trackx-demo-api
+    network_mode: 'host'
+    cap_drop:
+      - ALL
+    read_only: true
+    environment:
+      NODE_ENV: development
+      CONFIG_PATH: /data/trackx.config.js
+      DEMO_CONFIG_PATH: /data/demo.config.js
+      DEMO_MODE: 'true'
+    tmpfs:
+      - /data/db:rw,noexec,nodev,nosuid,size=256k
+    volumes:
+      - type: bind
+        source: ../trackx/packages/trackx-api/migrations/master.sql
+        target: /data/live-db/master.sql
+        read_only: true
+      # - type: bind
+      #   source: ../trackx/packages/trackx-api/libsqlite_zstd.so
+      #   target: /data/live-db/libsqlite_zstd.so
+      #   read_only: true
+      - type: bind
+        source: ../trackx/packages/trackx-api/trackx.db
+        target: /data/live-db/trackx.db
+        read_only: true
+      - type: bind
+        source: ../trackx/packages/trackx-api/trackx.db-shm
+        target: /data/live-db/trackx.db-shm
+        read_only: true
+      - type: bind
+        source: ../trackx/packages/trackx-api/trackx.db-wal
+        target: /data/live-db/trackx.db-wal
+        read_only: true
+      - type: bind
+        source: ./trackx.config.js
+        target: /data/trackx.config.js
+        read_only: true
+      - type: bind
+        source: ./demo.config.js
+        target: /data/demo.config.js
+        read_only: true
+    stop_grace_period: 40s

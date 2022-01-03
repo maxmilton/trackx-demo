@@ -1,0 +1,32 @@
+#!/bin/bash
+
+set -Eeuo pipefail
+
+script_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd -P)
+
+TRACKX_PACKAGES_DIR="${script_dir}/../../trackx/packages"
+DIST_DIR="${script_dir}/../dist"
+
+export NODE_ENV=${NODE_ENV:-'production'}
+export DEMO_MODE=true
+
+pnpm run --dir "${TRACKX_PACKAGES_DIR}/.." build
+pnpm run --dir "${script_dir}/.." build
+
+mkdir -p \
+  "${DIST_DIR}/api" \
+  "${DIST_DIR}/etc/nginx" \
+  "${DIST_DIR}/var/dash"
+
+cp "${TRACKX_PACKAGES_DIR}/trackx-api/Dockerfile" "$DIST_DIR"
+cp "${TRACKX_PACKAGES_DIR}/trackx-api/dist/"* "${DIST_DIR}/api/"
+cp -r "${script_dir}/../nginx/conf.d" "${DIST_DIR}/etc/nginx/"
+cp "${script_dir}/../demo.config.js.template" "${DIST_DIR}/etc/"
+cp "${script_dir}/../trackx.config.js.template" "${DIST_DIR}/etc/"
+cp -r "${TRACKX_PACKAGES_DIR}/trackx-dash/dist/"* "${DIST_DIR}/var/dash/"
+
+DEMO_CONFIG_PATH="${script_dir}/../demo.config.js" node -r tsm "${script_dir}/transform-files.ts"
+
+if [ "$NODE_ENV" == "production" ]; then
+  tar -czf trackx-demo.tar.gz -C "${DIST_DIR}" etc var
+fi

@@ -1,0 +1,64 @@
+{
+  "name": "trackx-demo",
+  "version": "0.2.0",
+  "description": "Tools to power a TrackX demo site",
+  "repository": "maxmilton/trackx-demo",
+  "homepage": "https://demo.trackx.app",
+  "author": "Max Milton <max@happycode.ltd>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "pnpm run prebuild && NODE_ENV=production node build.mjs",
+    "dev": "NODE_ENV=development node build.mjs",
+    "lint": "pnpm run lint:js && pnpm run lint:ts",
+    "lint:js": "eslint --ignore-path .gitignore --ext .cjs,.js,.mjs,.ts .",
+    "lint:ts": "tsc --project test --noEmit",
+    "prebuild": "rm -rf dist",
+    "serve": "docker compose --file docker-compose.dev.yml up --build --abort-on-container-exit",
+    "setup": "scripts/build",
+    "setup-dev": "NODE_ENV=development scripts/build",
+    "test": "c8 --all --include=src --include=scripts --reporter=text --reporter=lcovonly uvu -r tsm test '\\.test\\.ts$'"
+  },
+  "dependencies": {
+    "better-sqlite3": "7.4.6",
+    "trackx": "../trackx/packages/trackx",
+    "trackx-api": "../trackx/packages/trackx-api"
+  },
+  "devDependencies": {
+    "@ekscss/plugin-prefix": "0.0.7",
+    "@types/better-sqlite3": "7.4.2",
+    "@types/node": "17.0.6",
+    "@typescript-eslint/eslint-plugin": "5.8.1",
+    "@typescript-eslint/parser": "5.8.1",
+    "astray": "1.1.1",
+    "c8": "7.11.0",
+    "ekscss": "0.0.12",
+    "esbuild": "0.14.10",
+    "eslint": "8.6.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-config-airbnb-typescript": "16.1.0",
+    "eslint-plugin-import": "2.25.3",
+    "eslint-plugin-unicorn": "40.0.0",
+    "git-ref": "0.3.1",
+    "magic-string": "0.25.7",
+    "meriyah": "4.2.0",
+    "prettier": "2.5.1",
+    "prettier-plugin-pkg": "0.11.1",
+    "prettier-plugin-sh": "0.8.1",
+    "prettier-plugin-sql": "0.4.1",
+    "tsm": "2.2.1",
+    "typescript": "4.5.4",
+    "uvu": "0.5.2"
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "endOfLine": "lf",
+    "singleQuote": true,
+    "trailingComma": "all",
+    "plugins": [
+      "./node_modules/prettier-plugin-pkg",
+      "./node_modules/prettier-plugin-sh",
+      "./node_modules/prettier-plugin-sql"
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+services:
+  demo-api:
+    build:
+      context: ./dist/api
+      dockerfile: ../Dockerfile
+    image: trackx-demo-api
+    command: /bin/sh -ec "/usr/bin/node plugin.js init && /usr/bin/node server.js"
+    init: true # forward kill signals to subprocesses
+    container_name: trackx-demo-api
+    network_mode: 'host'
+    cap_drop:
+      - ALL
+    read_only: true
+    environment:
+      NODE_ENV: production
+      CONFIG_PATH: /data/trackx.config.js
+      DEMO_CONFIG_PATH: /data/demo.config.js
+      DEMO_MODE: 'true'
+    tmpfs:
+      - /data/db:rw,noexec,nodev,nosuid,size=256k
+    volumes:
+      - type: bind
+        source: /opt/trackx/var/db
+        target: /data/live-db
+        read_only: true
+      - type: bind
+        source: /opt/trackx-demo/etc/trackx.config.js
+        target: /data/trackx.config.js
+        read_only: true
+      - type: bind
+        source: /opt/trackx-demo/etc/demo.config.js
+        target: /data/demo.config.js
+        read_only: true
+    stop_grace_period: 40s
+    restart: always
+    # FIXME: No curl in the image!
+    # healthcheck:
+    #   test: ['CMD', 'curl', '--fail', 'http://127.0.0.1:8000/health']
+    #   interval: 1m30s
+    #   timeout: 10s
+    #   retries: 3
+    #   start_period: 30s

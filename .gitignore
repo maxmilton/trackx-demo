@@ -1,0 +1,10 @@
+*-lock.json*
+*.lock
+*.log
+*.tar.gz
+/coverage/
+dist
+node_modules
+
+# User configuration
+docker-compose.yml
