@@ -32,22 +32,28 @@ pnpm install
 
 ### Build and pack for production
 
-1.  Run the build:
-
-    ```sh
-    pnpm run setup
-    ```
-
-1.  Copy the resulting `trackx-demo.tar.gz` file to your server and then follow the normal [TrackX installation instructions](https://docs.trackx.app/#/getting-started/installation.md) but unpack to `/opt/trackx-demo`:
-
-    ```sh
-    mkdir -p /opt/trackx-demo && tar -xzf trackx-demo.tar.gz -C /opt/trackx-demo && rm trackx-demo.tar.gz
-    ```
-
-1.  Create a hard link to the Nginx vhost config:
-    ```sh
-    ln /opt/trackx-demo/etc/nginx/conf.d/demo.trackx.app.conf /opt/trackx/etc/nginx/conf.d/
-    ```
+1. Edit the frontend configuration; `frontend-trackx.config.mjs`.
+1. Create a docker compose configuration file from the template and edit:
+   ```sh
+   cp docker-compose.yml.template docker-compose.yml
+   ```
+1. Run the build:
+   ```sh
+   pnpm run setup
+   ```
+1. Copy the resulting `trackx-demo.tar.gz` file to your server and then follow the normal [TrackX installation instructions](https://docs.trackx.app/#/getting-started/installation.md) but unpack to `/opt/trackx-demo`:
+   ```sh
+   mkdir -p /opt/trackx-demo && tar -xzf trackx-demo.tar.gz -C /opt/trackx-demo && rm trackx-demo.tar.gz
+   ```
+1. [SERVER] Create a demo config from the template and edit:
+   ```sh
+   cp /opt/trackx-demo/etc/demo.config.js.template /opt/trackx-demo/etc/demo.config.js
+   ```
+1. [SERVER] Create a hard link to the Nginx vhost config:
+   ```sh
+   ln /opt/trackx-demo/etc/nginx/conf.d/demo.trackx.app.conf /opt/trackx/etc/nginx/conf.d/
+   ```
+1. Reload Nginx.
 
 ### Development
 
