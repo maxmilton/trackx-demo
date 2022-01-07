@@ -87,4 +87,4 @@ MIT license. See [LICENSE](https://github.com/maxmilton/trackx-demo/blob/master/
 
 ---
 
-© 2021 [Max Milton](https://maxmilton.com)
+© 2022 [Max Milton](https://maxmilton.com)
