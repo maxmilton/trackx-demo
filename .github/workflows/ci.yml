@@ -21,6 +21,7 @@ jobs:
       - run: pnpm --dir trackx-demo run test
       - name: Report coverage
         run: |
+          cd trackx-demo
           curl -Lo ./cc-test-reporter https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64
           chmod +x ./cc-test-reporter
           ./cc-test-reporter format-coverage -t lcov -o coverage/codeclimate.json coverage/lcov.info
