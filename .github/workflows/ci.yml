@@ -15,9 +15,9 @@ jobs:
         with:
           node-version: 16
       - run: npm install --global pnpm
-      - run: pnpm --dir trackx install --frozen-lockfile
-      - run: pnpm --dir trackx run setup # includes build
-      - run: pnpm --dir trackx run test
+      - run: cd trackx && pnpm install --frozen-lockfile
+      - run: cd trackx && pnpm run setup # includes build
+      - run: cd trackx && pnpm run test
   lint:
     runs-on: ubuntu-latest
     steps:
@@ -32,5 +32,5 @@ jobs:
         with:
           node-version: 16
       - run: npm install --global pnpm
-      - run: pnpm --dir trackx install --frozen-lockfile
-      - run: pnpm --dir trackx run lint
+      - run: cd trackx && pnpm install --frozen-lockfile
+      - run: cd trackx && pnpm run lint
