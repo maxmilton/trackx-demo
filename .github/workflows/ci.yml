@@ -33,5 +33,6 @@ jobs:
         with:
           node-version: 16
       - run: npm install --global pnpm
+      - run: pnpm --dir trackx install --frozen-lockfile
       - run: pnpm --dir trackx-demo install --frozen-lockfile
       - run: pnpm --dir trackx-demo run lint
