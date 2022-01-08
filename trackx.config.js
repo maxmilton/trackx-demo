@@ -2,10 +2,8 @@ if (!process.env.NODE_ENV || process.env.NODE_ENV === 'production') {
   throw new Error('DO NOT USE DEVELOPMENT CONFIG IN PRODUCTION');
 }
 
-/** @type {import('./src/types').DemoTrackXAPIConfig} */
+/** @type {import('trackx-api/src/types').TrackXAPIConfig} */
 module.exports = {
-  DEMO_MODE: true,
-
   USERS: {
     // email = demo@trackx.app + password = demodemo
     'demo@trackx.app': [

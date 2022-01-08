@@ -1,17 +1,3 @@
-import type { Database } from 'better-sqlite3';
-import type { TrackXAPIConfig } from 'trackx-api/src/types';
-
-export interface DemoTrackXAPIConfig extends TrackXAPIConfig {
-  DEMO_MODE: boolean;
-}
-
-export type TrackXAPIPlugin = (context: {
-  app: any;
-  config: DemoTrackXAPIConfig;
-  db: Database;
-  logger: Record<string, (msg: string | Error, ...args: any[]) => void>;
-}) => void;
-
 export interface DemoPluginConfig {
   DEMO_ROOT_DIR?: string;
   LIVE_FRONTEND_CONFIG_PATH: string;

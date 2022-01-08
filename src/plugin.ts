@@ -1,7 +1,7 @@
-import type { TrackXAPIPlugin } from './types';
+import type { Plugin } from 'trackx-api/src/types';
 import { getConfig } from './utils';
 
-export const plugin: TrackXAPIPlugin = ({ db, logger }) => {
+export const plugin: Plugin = ({ db, logger }) => {
   logger.log('DEMO PLUGIN LOADED');
 
   const demoConfig = getConfig();
