@@ -31,5 +31,6 @@ module.exports = {
   NET_MAX_FILE_BYTES: 0,
   NET_RETRY: 0,
   NET_TIMEOUT: 0,
+  SCHEDULED_JOB_INTERVAL: 0,
   SESSION_TTL: 2_400_000, // 40 minutes
 };
