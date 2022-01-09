@@ -8,9 +8,9 @@ Tools to power a TrackX demo site like <https://demo.trackx.app>. A demo is a fu
 
 ### Features
 
-- Automation to build TrackX apps and modify them for use in a demo:
-  - Replace front end app config values that are baked into the output JS.
-  - Inject demo banner into front end apps.
+- Automation to build the TrackX platform and modify it for use as a demo:
+  - Replace front end app configuration values that are baked into the output JS.
+  - Inject a demo banner into front end apps.
   - Inject demo user email and password into the login page inputs.
 - TrackX API server plugin which:
   - Initializes a demo database.
@@ -18,7 +18,10 @@ Tools to power a TrackX demo site like <https://demo.trackx.app>. A demo is a fu
 
 ### Goals
 
-- Don't add any demo specific things to [the main project](https://github.com/maxmilton/trackx); people who host a regular instance must have zero impact
+- Don't add demo specific things to <https://github.com/maxmilton/trackx>; anyone who runs regular TrackX must have zero impact.
+- No performance impact on the live instance.
+- Performance should be similar to regular TrackX.
+- The dashboard should still be real-time.
 
 ## How does it work, technically?
 
@@ -32,7 +35,7 @@ In the demo docker container, the live database is read-only. That makes it impo
 
 ## Usage
 
-> Note: Needs the <https://github.com/maxmilton/trackx> files in a directory parallel to this one.
+> Note: You'll need the <https://github.com/maxmilton/trackx> files in a directory parallel to this one.
 
 ### Install dependencies
 
@@ -51,7 +54,8 @@ pnpm install
    ```sh
    pnpm run setup
    ```
-1. Copy the resulting `trackx-demo.tar.gz` file to your server and then follow the normal [TrackX installation instructions](https://docs.trackx.app/#/getting-started/installation.md) but unpack to `/opt/trackx-demo`:
+1. Copy the resulting `trackx-demo.tar.gz` file to your server.
+1. Follow the relevant steps of the normal [TrackX installation instructions](https://docs.trackx.app/#/getting-started/installation.md) but unpack to `/opt/trackx-demo`:
    ```sh
    mkdir -p /opt/trackx-demo && tar -xzf trackx-demo.tar.gz -C /opt/trackx-demo && rm trackx-demo.tar.gz
    ```
@@ -89,7 +93,7 @@ pnpm run test
 
 ## Bugs
 
-Please report any bugs you encounter on the [GitHub issue tracker](https://github.com/maxmilton/trackx-demo/issues).
+Report any bugs you encounter on the [GitHub issue tracker](https://github.com/maxmilton/trackx-demo/issues).
 
 ## License
 
