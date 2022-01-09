@@ -13,7 +13,7 @@ module.exports = {
   DB_ZSTD_PATH: '',
   DB_INIT_SQL_PATH: '',
   DB_COMPRESSION: 0,
-  REPORT_API_ENDPOINT: 'http://127.0.0.1:8080/v1/upvt8nvogp4',
+  REPORT_API_ENDPOINT: 'http://127.0.0.1:8001/v1/upvt8nvogp4',
   DASH_ORIGIN: 'https://demo.trackx.app',
 
   MAX_EVENT_BYTES: 0,
