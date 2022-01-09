@@ -61,7 +61,7 @@ pnpm install
    ```
 1. [SERVER] Create a hard link to the Nginx vhost config:
    ```sh
-   ln /opt/trackx-demo/etc/nginx/conf.d/demo.trackx.app.conf /opt/trackx/etc/nginx/conf.d/
+   ln -f /opt/trackx-demo/etc/nginx/conf.d/demo.trackx.app.conf /opt/trackx/etc/nginx/conf.d/
    ```
 1. Reload Nginx.
 
