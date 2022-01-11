@@ -19,5 +19,5 @@ docker run --rm \
   --tmpfs /tmp/db:rw,noexec,nodev,nosuid,uid=5063,gid=5063,mode=0700,size=1m \
   --mount type=bind,src="$config_path",dst=/data/trackx.config.js,ro \
   --mount type=bind,src="$demo_config_path",dst=/data/demo.config.js,ro \
-  --mount type=bind,src="${repo_root_dir}/dist/var/db/master.sql",dst=/data/db/master.sql \
+  --mount type=bind,src="${repo_root_dir}/../trackx/packages/trackx-api/migrations/master.sql",dst=/data/db/master.sql \
   ci/trackx-demo-api /usr/bin/node plugin.js init
