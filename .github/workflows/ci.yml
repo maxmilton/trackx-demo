@@ -16,7 +16,11 @@ jobs:
           node-version: 16
       - run: npm install --global pnpm
       - run: pnpm --dir trackx install --frozen-lockfile
+        env:
+          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
       - run: pnpm --dir trackx-demo install --frozen-lockfile
+        env:
+          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
       - run: pnpm --dir trackx-demo run setup # includes build
       - run: pnpm --dir trackx-demo run test
       - name: Report coverage
@@ -43,5 +47,9 @@ jobs:
           node-version: 16
       - run: npm install --global pnpm
       - run: pnpm --dir trackx install --frozen-lockfile
+        env:
+          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
       - run: pnpm --dir trackx-demo install --frozen-lockfile
+        env:
+          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
       - run: pnpm --dir trackx-demo run lint

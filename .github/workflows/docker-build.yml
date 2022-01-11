@@ -1,0 +1,29 @@
+name: Docker build
+on:
+  push:
+    branches: [master]
+jobs:
+  docker-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          path: 'trackx-demo'
+      - uses: actions/checkout@v2
+        with:
+          repository: 'maxmilton/trackx'
+          path: 'trackx'
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16
+      - run: npm install --global pnpm
+      - run: pnpm --dir trackx install --frozen-lockfile
+        env:
+          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
+      - run: pnpm --dir trackx-demo install --frozen-lockfile
+        env:
+          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
+      - run: pnpm --dir trackx-demo run setup # includes build
+      - name: Build trackx-api docker image
+        run: docker build -t ci/trackx-demo-api -f trackx-demo/dist/Dockerfile dist/api
+      - run: .github/workflows/test-docker.sh
