@@ -26,4 +26,4 @@ jobs:
       - run: pnpm --dir trackx-demo run setup # includes build
       - name: Build trackx-api docker image
         run: docker build -t ci/trackx-demo-api -f trackx-demo/dist/Dockerfile trackx-demo/dist/api
-      - run: .github/workflows/test-docker.sh
+      - run: trackx-demo/.github/workflows/test-docker.sh
