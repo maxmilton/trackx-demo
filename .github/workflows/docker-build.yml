@@ -25,5 +25,5 @@ jobs:
           PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
       - run: pnpm --dir trackx-demo run setup # includes build
       - name: Build trackx-api docker image
-        run: docker build -t ci/trackx-demo-api -f trackx-demo/dist/Dockerfile dist/api
+        run: docker build -t ci/trackx-demo-api -f trackx-demo/dist/Dockerfile trackx-demo/dist/api
       - run: .github/workflows/test-docker.sh
