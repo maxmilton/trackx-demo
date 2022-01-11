@@ -6,10 +6,8 @@ if (!process.env.NODE_ENV || process.env.NODE_ENV === 'production') {
 module.exports = {
   USERS: {
     // email = demo@trackx.app + password = demodemo
-    'demo@trackx.app': [
-      's1bpitrp',
-      'JdbCTbhYMpXfMbmbPzvwfpBs9ehmrkL6QhS0Kny1MvnaVTL4qETmV9OJ15MISaXuIBj2aGrfbW6TpXxwKF8LMA==',
-    ],
+    'demo@trackx.app':
+      'PBatDsExb/uRuqsMfJ5+Vg==:IUQeTYzZi5GMQ9tH/5LZeufeWZXS5M3m+w+tuX/FPsk6SSQEoknliuP1Ul0YO6hdS+ifhz31bR776i1i94W94Q==',
   },
 
   ROOT_DIR: __dirname,
