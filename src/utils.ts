@@ -9,6 +9,13 @@ export function getConfig(): DemoPluginConfig & { DEMO_CONFIG_PATH: string } {
   // eslint-disable-next-line max-len
   // eslint-disable-next-line @typescript-eslint/no-var-requires, import/no-dynamic-require, global-require
   const rawConfig = require(DEMO_CONFIG_PATH) as DemoPluginConfig;
+  // Override config values with env vars
+  for (const key of Object.keys(rawConfig)) {
+    if (typeof process.env[key] !== 'undefined') {
+      // @ts-expect-error - unavoidable string indexing
+      rawConfig[key] = process.env[key];
+    }
+  }
   const rootDir = path.resolve(__dirname, rawConfig.DEMO_ROOT_DIR || '.');
 
   return {
