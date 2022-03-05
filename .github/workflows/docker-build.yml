@@ -6,10 +6,10 @@ jobs:
   docker-build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           path: 'trackx-demo'
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           repository: 'maxmilton/trackx'
           path: 'trackx'
