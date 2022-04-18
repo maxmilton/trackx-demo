@@ -18,7 +18,7 @@ specifiers:
   eslint-plugin-unicorn: 42.0.0
   git-ref: 0.3.1
   magic-string: 0.26.1
-  meriyah: 4.2.0
+  meriyah: 4.2.1
   prettier: 2.6.2
   prettier-plugin-pkg: 0.13.0
   prettier-plugin-sh: 0.10.1
@@ -51,7 +51,7 @@ devDependencies:
   eslint-plugin-unicorn: 42.0.0_eslint@8.13.0
   git-ref: 0.3.1
   magic-string: 0.26.1
-  meriyah: 4.2.0
+  meriyah: 4.2.1
   prettier: 2.6.2
   prettier-plugin-pkg: 0.13.0_prettier@2.6.2
   prettier-plugin-sh: 0.10.1_prettier@2.6.2
@@ -1754,8 +1754,8 @@ packages:
     engines: {node: '>= 8'}
     dev: true
 
-  /meriyah/4.2.0:
-    resolution: {integrity: sha512-fCVh5GB9YT53Bq14l00HLYE3i9DywrY0JVZxbk0clXWDuMsUKKwluvC5sY0bMBqHbnIbpIjfSSIsnrzbauA8Yw==}
+  /meriyah/4.2.1:
+    resolution: {integrity: sha512-Uv5sWsmjFNC6IszEmHo5bzJLL+kqjQ/VrEj9Agqsqtx7B6dcxHnHLew1ioJD19HNXrxrRZltPi+NVh12I8RLXA==}
     engines: {node: '>=10.4.0'}
     dev: true
 
