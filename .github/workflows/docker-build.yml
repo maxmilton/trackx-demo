@@ -15,7 +15,7 @@ jobs:
           path: 'trackx'
       - uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18
       - run: npm install --global pnpm
       - run: pnpm --dir trackx install --frozen-lockfile
         env:
