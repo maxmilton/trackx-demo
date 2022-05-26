@@ -7,7 +7,6 @@ import { gitHash, isDirty } from 'git-ref';
 
 // Workaround for no JSON import in ESM yet
 /** @type {import('./package.json')} */
-// eslint-disable-next-line unicorn/prefer-json-parse-buffer
 const pkg = JSON.parse(await fs.readFile('./package.json', 'utf8'));
 
 const mode = process.env.NODE_ENV;
