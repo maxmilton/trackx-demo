@@ -16,7 +16,7 @@ const release = `v${pkg.version}-${gitHash()}${isDirty() ? '-dev' : ''}`;
 const out = await esbuild.build({
   entryPoints: ['src/index.ts'],
   outfile: 'dist/api/plugin.js',
-  target: ['node16'],
+  target: ['node18'],
   platform: 'node',
   define: {
     'process.env.APP_RELEASE': JSON.stringify(release),
