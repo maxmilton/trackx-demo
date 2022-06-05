@@ -19,7 +19,7 @@ const out = await esbuild.build({
   target: ['node18'],
   platform: 'node',
   define: {
-    'process.env.APP_RELEASE': JSON.stringify(release),
+    'process.env.DEMO_PLUGIN_RELEASE': JSON.stringify(release),
     'process.env.NODE_ENV': JSON.stringify(mode),
   },
   external: ['better-sqlite3', 'source-map', 'source-map-support'],

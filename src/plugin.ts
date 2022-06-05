@@ -1,8 +1,11 @@
 import type { Plugin } from 'trackx-api/src/types';
+import * as trackx from 'trackx/node';
 import { getConfig } from './utils';
 
 export const plugin: Plugin = ({ db, logger }) => {
   logger.log('DEMO PLUGIN LOADED');
+
+  trackx.meta.demo_plugin = process.env.DEMO_PLUGIN_RELEASE;
 
   const demoConfig = getConfig();
 
