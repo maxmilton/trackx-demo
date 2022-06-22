@@ -27,7 +27,7 @@ specifiers:
   trackx-api: ../trackx/packages/trackx-api
   tsm: 2.2.1
   typescript: 4.7.4
-  uvu: 0.5.3
+  uvu: 0.5.4
 
 dependencies:
   better-sqlite3: 7.5.3
@@ -58,7 +58,7 @@ devDependencies:
   prettier-plugin-sql: 0.7.0_prettier@2.7.1
   tsm: 2.2.1
   typescript: 4.7.4
-  uvu: 0.5.3
+  uvu: 0.5.4
 
 packages:
 
@@ -2499,8 +2499,8 @@ packages:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
     dev: false
 
-  /uvu/0.5.3:
-    resolution: {integrity: sha512-brFwqA3FXzilmtnIyJ+CxdkInkY/i4ErvP7uV0DnUVxQcQ55reuHphorpF+tZoVHK2MniZ/VJzI7zJQoc9T9Yw==}
+  /uvu/0.5.4:
+    resolution: {integrity: sha512-x1CyUjcP9VKaNPhjeB3FIc/jqgLsz2Q9LFhRzUTu/jnaaHILEGNuE0XckQonl8ISLcwyk9I2EZvWlYsQnwxqvQ==}
     engines: {node: '>=8'}
     hasBin: true
     dependencies:
