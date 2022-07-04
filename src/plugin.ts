@@ -33,6 +33,7 @@ DROP TRIGGER issue_ai;
 DROP TRIGGER issue_ad;
 DROP TABLE daily_pings;
 DROP TABLE daily_events;
+DROP TABLE daily_dash;
 DROP TABLE session_graph;
 DROP TABLE event;
 DROP TABLE issue;
@@ -55,6 +56,9 @@ CREATE TEMPORARY VIEW daily_events
 
 CREATE TEMPORARY VIEW daily_pings
   AS SELECT * FROM live.daily_pings;
+
+CREATE TEMPORARY VIEW daily_dash
+  AS SELECT * FROM live.daily_dash;
 
 COMMIT;`,
   );
