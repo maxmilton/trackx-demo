@@ -19,9 +19,7 @@
     "noFallthroughCasesInSwitch": true,
     "noImplicitOverride": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": true,
-
-    "alwaysStrict": false // prefer "use strict" via esbuild banner option
+    "noUnusedParameters": true
   },
   "exclude": ["coverage", "dist", "node_modules", "test"]
 }

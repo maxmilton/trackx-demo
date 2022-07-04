@@ -23,7 +23,6 @@ const out = await esbuild.build({
     'process.env.NODE_ENV': JSON.stringify(mode),
   },
   external: ['better-sqlite3', 'source-map', 'source-map-support'],
-  banner: { js: '#!/usr/bin/env node\n"use strict";' },
   bundle: true,
   sourcemap: true,
   minifySyntax: !dev,
