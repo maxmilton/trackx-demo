@@ -17,7 +17,7 @@ docker run --rm \
   --env DEMO_CONFIG_PATH="/data/demo.config.js" \
   --env DEMO_DB_PATH="/tmp/db/trackx.db" \
   --env DEMO_MODE=true \
-  --tmpfs /tmp/db:rw,noexec,nodev,nosuid,uid=506,gid=506,mode=0700,size=1m \
+  --tmpfs /tmp/db:rw,noexec,nodev,nosuid,uid=5063,gid=5063,mode=0700,size=1m \
   --mount type=bind,src="$config_path",dst=/data/trackx.config.js,ro \
   --mount type=bind,src="$demo_config_path",dst=/data/demo.config.js,ro \
   --mount type=bind,src="${repo_root_dir}/../trackx/packages/trackx-api/migrations/master.sql",dst=/data/db/master.sql \
