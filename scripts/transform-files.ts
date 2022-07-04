@@ -1,6 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies, no-console */
 
-// TODO: Handle updating source maps
+// FIXME: Update source maps too
 
 import { walk, type ESTreeMap } from 'astray';
 import * as ekscss from 'ekscss';
@@ -71,6 +71,7 @@ function replaceInStrings(
 }
 
 (async () => {
+  const apiDir = path.join(__dirname, '../dist/api');
   const dashDir = path.join(__dirname, '../dist/var/dash');
 
   const indexHtmlPath = path.join(dashDir, 'index.html');
@@ -90,6 +91,7 @@ function replaceInStrings(
     .replace('<input id=email', '<input id=email value="demo@trackx.app"')
     .replace('<input id=password', '<input id=password value="demodemo"');
 
+  const serverScriptPath = path.join(apiDir, 'server.js');
   const trackxScriptPath = path.join(dashDir, 'trackx.js');
   const entryScriptPath = path.join(
     dashDir,
@@ -115,7 +117,15 @@ function replaceInStrings(
     config.DEMO_FRONTEND_CONFIG_PATH
   )) as FrontendConfig;
 
-  const [trackxScript, entryScript, loginScript, entryStyles, loginStyles] = await Promise.all([
+  const [
+    serverScript,
+    trackxScript,
+    entryScript,
+    loginScript,
+    entryStyles,
+    loginStyles,
+  ] = await Promise.all([
+    fs.readFile(serverScriptPath, 'utf8'),
     fs.readFile(trackxScriptPath, 'utf8'),
     fs.readFile(entryScriptPath, 'utf8'),
     fs.readFile(loginScriptPath, 'utf8'),
@@ -135,6 +145,9 @@ function replaceInStrings(
     }
   }
 
+  const newServerScript = serverScript
+    // Remove server /dash/* route request stats tracking
+    .replace(/use\("\/dash\/\*", \w+, (\w+)\)/, 'use("/dash/*", $1)');
   const newTrackxScript = replaceInStrings(trackxScript, configMap);
   const newEntryScript = replaceInStrings(entryScript, configMap);
   const newLoginScript = replaceInStrings(loginScript, configMap);
@@ -181,10 +194,14 @@ function replaceInStrings(
   await Promise.all([
     fs.writeFile(indexHtmlPath, newIndexHtml),
     fs.writeFile(loginHtmlPath, newLoginHtml),
+    fs.writeFile(serverScriptPath, newServerScript),
     fs.writeFile(trackxScriptPath, newTrackxScript),
     fs.writeFile(entryScriptPath, newEntryScript),
     fs.writeFile(loginScriptPath, newLoginScript),
     fs.writeFile(entryStylesPath, newEntryStylesCode),
     fs.writeFile(loginStylesPath, newLoginStylesCode),
   ]);
-})().catch(console.error);
+})().catch((error) => {
+  console.error(error);
+  process.exit(1);
+});
