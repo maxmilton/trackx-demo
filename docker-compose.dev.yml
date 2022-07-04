@@ -57,7 +57,7 @@ services:
       DEMO_CONFIG_PATH: /data/demo.config.js
       DEMO_MODE: 'true'
     tmpfs:
-      - /data/db:rw,noexec,nodev,nosuid,uid=5063,gid=5063,mode=1700,size=256k
+      - /data/db:rw,noexec,nodev,nosuid,uid=506,gid=506,mode=1700,size=256k
     volumes:
       - type: bind
         source: ../trackx/packages/trackx-api/migrations/master.sql
