@@ -10,3 +10,5 @@ export const REPORT_API_BASE_URL = prod
   ? 'https://api.trackx.app/v1'
   : 'http://localhost:5000/api/v1';
 export const REPORT_API_KEY = 'upvt8nvogp4';
+
+export const ENABLE_DB_TABLE_STATS = false;
