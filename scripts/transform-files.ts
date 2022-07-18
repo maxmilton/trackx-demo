@@ -145,6 +145,8 @@ function replaceInStrings(
     }
   }
 
+  // TODO: It would be nice if demo dash requests were actually counted
+
   const newServerScript = serverScript
     // Remove server /dash/* route request stats tracking
     .replace(/use\("\/dash\/\*", \w+, (\w+)\)/, 'use("/dash/*", $1)');
