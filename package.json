@@ -31,7 +31,7 @@
     "@typescript-eslint/eslint-plugin": "5.30.7",
     "@typescript-eslint/parser": "5.30.7",
     "astray": "1.1.1",
-    "c8": "7.11.3",
+    "c8": "7.12.0",
     "ekscss": "0.0.13",
     "esbuild": "0.14.49",
     "eslint": "8.20.0",
