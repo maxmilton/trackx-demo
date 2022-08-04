@@ -22,7 +22,7 @@ specifiers:
   prettier: 2.7.1
   prettier-plugin-pkg: 0.16.0
   prettier-plugin-sh: 0.12.6
-  prettier-plugin-sql: 0.9.0
+  prettier-plugin-sql: 0.10.2
   trackx: ../trackx/packages/trackx
   trackx-api: ../trackx/packages/trackx-api
   tsm: 2.2.2
@@ -55,7 +55,7 @@ devDependencies:
   prettier: 2.7.1
   prettier-plugin-pkg: 0.16.0_prettier@2.7.1
   prettier-plugin-sh: 0.12.6_prettier@2.7.1
-  prettier-plugin-sql: 0.9.0_prettier@2.7.1
+  prettier-plugin-sql: 0.10.2_prettier@2.7.1
   tsm: 2.2.2
   typescript: 4.7.4
   uvu: 0.5.6
@@ -2052,8 +2052,8 @@ packages:
       prettier: 2.7.1
     dev: true
 
-  /prettier-plugin-sql/0.9.0_prettier@2.7.1:
-    resolution: {integrity: sha512-lS6uq+PN49WXHKguU2CjN6vr3Vhr0OYPJtHiZ54MfRMoT/Cl5ahEjZNZo79OVp3RrOKc0V9lvRPS1/Cedr8uiA==}
+  /prettier-plugin-sql/0.10.2_prettier@2.7.1:
+    resolution: {integrity: sha512-N/UzXwHLZ3RGtCbegoEIKdqb1aQfjLQvbLWSR2QtGHrB9oGy9gWnUCqNG3dTlVnXUacRU/I6lMdhGryZdN6kZA==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
     peerDependencies:
       prettier: ^2.0.0
@@ -2061,6 +2061,7 @@ packages:
       node-sql-parser: 4.4.0
       prettier: 2.7.1
       sql-formatter: 8.2.0
+      tslib: 2.4.0
     dev: true
 
   /prettier/2.7.1:
@@ -2438,6 +2439,10 @@ packages:
 
   /tslib/1.14.1:
     resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
+    dev: true
+
+  /tslib/2.4.0:
+    resolution: {integrity: sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==}
     dev: true
 
   /tsm/2.2.2:
