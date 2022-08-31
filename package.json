@@ -34,7 +34,7 @@
     "c8": "7.12.0",
     "ekscss": "0.0.13",
     "esbuild": "0.15.5",
-    "eslint": "8.22.0",
+    "eslint": "8.23.0",
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-config-airbnb-typescript": "17.0.0",
     "eslint-plugin-import": "2.26.0",
