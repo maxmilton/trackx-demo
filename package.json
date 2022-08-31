@@ -43,7 +43,7 @@
     "magic-string": "0.26.2",
     "meriyah": "4.3.0",
     "prettier": "2.7.1",
-    "prettier-plugin-pkg": "0.16.1",
+    "prettier-plugin-pkg": "0.17.1",
     "prettier-plugin-sh": "0.12.8",
     "prettier-plugin-sql": "0.10.2",
     "tsm": "2.2.2",
