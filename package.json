@@ -40,7 +40,7 @@
     "eslint-plugin-import": "2.26.0",
     "eslint-plugin-unicorn": "43.0.2",
     "git-ref": "0.3.1",
-    "magic-string": "0.26.2",
+    "magic-string": "0.26.3",
     "meriyah": "4.3.0",
     "prettier": "2.7.1",
     "prettier-plugin-pkg": "0.16.1",
