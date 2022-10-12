@@ -26,7 +26,7 @@
   },
   "devDependencies": {
     "@ekscss/plugin-prefix": "0.0.8",
-    "@types/better-sqlite3": "7.6.0",
+    "@types/better-sqlite3": "7.6.2",
     "@types/node": "18.7.23",
     "@typescript-eslint/eslint-plugin": "5.39.0",
     "@typescript-eslint/parser": "5.39.0",

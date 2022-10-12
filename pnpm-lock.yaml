@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@ekscss/plugin-prefix': 0.0.8
-  '@types/better-sqlite3': 7.6.0
+  '@types/better-sqlite3': 7.6.2
   '@types/node': 18.7.23
   '@typescript-eslint/eslint-plugin': 5.39.0
   '@typescript-eslint/parser': 5.39.0
@@ -36,7 +36,7 @@ dependencies:
 
 devDependencies:
   '@ekscss/plugin-prefix': 0.0.8_ekscss@0.0.13
-  '@types/better-sqlite3': 7.6.0
+  '@types/better-sqlite3': 7.6.2
   '@types/node': 18.7.23
   '@typescript-eslint/eslint-plugin': 5.39.0_xyciw6oqjoiiono4dhv3uhn5my
   '@typescript-eslint/parser': 5.39.0_ypn2ylkkyfa5i233caldtndbqa
@@ -218,8 +218,8 @@ packages:
       tslib: 2.4.0
     dev: true
 
-  /@types/better-sqlite3/7.6.0:
-    resolution: {integrity: sha512-rnSP9vY+fVsF3iJja5yRGBJV63PNBiezJlYrCkqUmQWFoB16cxAHwOkjsAYEu317miOfKaJpa65cbp0P4XJ/jw==}
+  /@types/better-sqlite3/7.6.2:
+    resolution: {integrity: sha512-RgmaapusqTq6IMAr4McMyAsC6RshYTCjXCnzwVV59WctUxC8bNPyUfT9t5F81lKcU41lLurhjqjoMHfauzfqGg==}
     dependencies:
       '@types/node': 18.7.23
     dev: true
