@@ -1,13 +1,16 @@
 import { init } from './init';
 
 switch (process.argv[2]) {
-  case undefined:
+  case undefined: {
     break;
-  case 'init':
+  }
+  case 'init': {
     init();
     break;
-  default:
+  }
+  default: {
     throw new Error(`Unknown command: ${process.argv[2]}`);
+  }
 }
 
 // eslint-disable-next-line no-restricted-exports
