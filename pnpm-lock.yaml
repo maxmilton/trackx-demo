@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@ekscss/plugin-prefix': 0.0.8
   '@types/better-sqlite3': 7.6.2
-  '@types/node': 18.11.7
+  '@types/node': 18.11.8
   '@typescript-eslint/eslint-plugin': 5.41.0
   '@typescript-eslint/parser': 5.41.0
   astray: 1.1.1
@@ -37,7 +37,7 @@ dependencies:
 devDependencies:
   '@ekscss/plugin-prefix': 0.0.8_ekscss@0.0.13
   '@types/better-sqlite3': 7.6.2
-  '@types/node': 18.11.7
+  '@types/node': 18.11.8
   '@typescript-eslint/eslint-plugin': 5.41.0_huremdigmcnkianavgfk3x6iou
   '@typescript-eslint/parser': 5.41.0_wyqvi574yv7oiwfeinomdzmc3m
   astray: 1.1.1
@@ -217,7 +217,7 @@ packages:
   /@types/better-sqlite3/7.6.2:
     resolution: {integrity: sha512-RgmaapusqTq6IMAr4McMyAsC6RshYTCjXCnzwVV59WctUxC8bNPyUfT9t5F81lKcU41lLurhjqjoMHfauzfqGg==}
     dependencies:
-      '@types/node': 18.11.7
+      '@types/node': 18.11.8
     dev: true
 
   /@types/estree/0.0.45:
@@ -238,8 +238,8 @@ packages:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
     dev: true
 
-  /@types/node/18.11.7:
-    resolution: {integrity: sha512-LhFTglglr63mNXUSRYD8A+ZAIu5sFqNJ4Y2fPuY7UlrySJH87rRRlhtVmMHplmfk5WkoJGmDjE9oiTfyX94CpQ==}
+  /@types/node/18.11.8:
+    resolution: {integrity: sha512-uGwPWlE0Hj972KkHtCDVwZ8O39GmyjfMane1Z3GUBGGnkZ2USDq7SxLpVIiIHpweY9DS0QTDH0Nw7RNBsAAZ5A==}
     dev: true
 
   /@types/normalize-package-data/2.4.1:
