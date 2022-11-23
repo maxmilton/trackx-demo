@@ -11,7 +11,7 @@ export function getConfig(): DemoPluginConfig & { DEMO_CONFIG_PATH: string } {
   const rawConfig = require(DEMO_CONFIG_PATH) as DemoPluginConfig;
   // Override config values with env vars
   for (const key of Object.keys(rawConfig)) {
-    if (typeof process.env[key] !== 'undefined') {
+    if (process.env[key] !== undefined) {
       // @ts-expect-error - unavoidable string indexing
       rawConfig[key] = process.env[key];
     }
