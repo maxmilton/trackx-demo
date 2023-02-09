@@ -1,4 +1,4 @@
-[![Build status](https://img.shields.io/github/workflow/status/maxmilton/trackx-demo/ci)](https://github.com/maxmilton/trackx-demo/actions)
+[![Build status](https://img.shields.io/github/actions/workflow/status/maxmilton/trackx-demo/ci.yml?branch=master)](https://github.com/maxmilton/trackx-demo/actions)
 [![Coverage status](https://img.shields.io/codeclimate/coverage/maxmilton/trackx-demo)](https://codeclimate.com/github/maxmilton/trackx-demo)
 [![Licence](https://img.shields.io/github/license/maxmilton/trackx-demo.svg)](https://github.com/maxmilton/trackx-demo/blob/master/LICENSE)
 
