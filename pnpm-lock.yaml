@@ -17,7 +17,7 @@ specifiers:
   eslint-plugin-import: 2.27.5
   eslint-plugin-unicorn: 45.0.2
   git-ref: 0.3.1
-  magic-string: 0.27.0
+  magic-string: 0.29.0
   meriyah: 4.3.3
   prettier: 2.8.3
   prettier-plugin-pkg: 0.17.1
@@ -50,7 +50,7 @@ devDependencies:
   eslint-plugin-import: 2.27.5_mcvs2y73sfmcxqzpjj5lr7a2m4
   eslint-plugin-unicorn: 45.0.2_eslint@8.34.0
   git-ref: 0.3.1
-  magic-string: 0.27.0
+  magic-string: 0.29.0
   meriyah: 4.3.3
   prettier: 2.8.3
   prettier-plugin-pkg: 0.17.1_prettier@2.8.3
@@ -2127,8 +2127,8 @@ packages:
     dependencies:
       yallist: 4.0.0
 
-  /magic-string/0.27.0:
-    resolution: {integrity: sha512-8UnnX2PeRAPZuN12svgR9j7M1uWMovg/CEnIwIG0LFkXSJJe4PdfUGiTGl8V9bsBHFUtfVINcSyYxd7q+kx9fA==}
+  /magic-string/0.29.0:
+    resolution: {integrity: sha512-WcfidHrDjMY+eLjlU+8OvwREqHwpgCeKVBUpQ3OhYYuvfaYCUgcbuBzappNzZvg/v8onU3oQj+BYpkOJe9Iw4Q==}
     engines: {node: '>=12'}
     dependencies:
       '@jridgewell/sourcemap-codec': 1.4.14
