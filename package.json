@@ -42,7 +42,7 @@
     "git-ref": "0.3.1",
     "magic-string": "0.30.0",
     "meriyah": "4.3.5",
-    "prettier": "2.8.4",
+    "prettier": "2.8.7",
     "prettier-plugin-pkg": "0.17.1",
     "prettier-plugin-sh": "0.12.8",
     "prettier-plugin-sql": "0.13.0",
