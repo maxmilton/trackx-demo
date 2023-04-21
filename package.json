@@ -20,7 +20,7 @@
     "test": "c8 --all --include=src --include=scripts --reporter=text --reporter=lcovonly uvu -r tsm test '\\.test\\.ts$'"
   },
   "dependencies": {
-    "better-sqlite3": "7.6.2",
+    "better-sqlite3": "8.3.0",
     "trackx": "../trackx/packages/trackx",
     "trackx-api": "../trackx/packages/trackx-api"
   },
