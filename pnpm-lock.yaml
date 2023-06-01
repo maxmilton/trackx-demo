@@ -8,7 +8,7 @@ specifiers:
   '@typescript-eslint/parser': 5.55.0
   astray: 1.1.1
   better-sqlite3: 7.6.2
-  c8: 7.13.0
+  c8: 7.14.0
   ekscss: 0.0.13
   esbuild: 0.17.12
   eslint: 8.36.0
@@ -41,7 +41,7 @@ devDependencies:
   '@typescript-eslint/eslint-plugin': 5.55.0_342y7v4tc7ytrrysmit6jo4wri
   '@typescript-eslint/parser': 5.55.0_vgl77cfdswitgr47lm5swmv43m
   astray: 1.1.1
-  c8: 7.13.0
+  c8: 7.14.0
   ekscss: 0.0.13
   esbuild: 0.17.12
   eslint: 8.36.0
@@ -755,8 +755,8 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /c8/7.13.0:
-    resolution: {integrity: sha512-/NL4hQTv1gBL6J6ei80zu3IiTrmePDKXKXOTLpHvcIWZTVYQlDhVWjjWvkhICylE8EwwnMVzDZugCvdx0/DIIA==}
+  /c8/7.14.0:
+    resolution: {integrity: sha512-i04rtkkcNcCf7zsQcSv/T9EbUn4RXQ6mropeMcjFOsQXQ0iGLAr/xT6TImQg4+U9hmNpN9XdvPkjUL1IzbgxJw==}
     engines: {node: '>=10.12.0'}
     hasBin: true
     dependencies:
