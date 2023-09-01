@@ -22,7 +22,7 @@ specifiers:
   prettier: 2.8.4
   prettier-plugin-pkg: 0.17.1
   prettier-plugin-sh: 0.12.8
-  prettier-plugin-sql: 0.13.0
+  prettier-plugin-sql: 0.15.1
   trackx: ../trackx/packages/trackx
   trackx-api: ../trackx/packages/trackx-api
   tsm: 2.3.0
@@ -55,7 +55,7 @@ devDependencies:
   prettier: 2.8.4
   prettier-plugin-pkg: 0.17.1_prettier@2.8.4
   prettier-plugin-sh: 0.12.8_prettier@2.8.4
-  prettier-plugin-sql: 0.13.0_prettier@2.8.4
+  prettier-plugin-sql: 0.15.1_prettier@2.8.4
   tsm: 2.3.0
   typescript: 4.9.5
   uvu: 0.5.6
@@ -1676,6 +1676,11 @@ packages:
       has-symbols: 1.0.3
     dev: true
 
+  /get-stdin/8.0.0:
+    resolution: {integrity: sha512-sY22aA6xchAzprjyqmSEQv4UbAAzRN0L2dQB0NlN5acTTK9Don6nhoc3eAbUnpZiCANAMfd/+40kVdKfFygohg==}
+    engines: {node: '>=10'}
+    dev: true
+
   /get-symbol-description/1.0.0:
     resolution: {integrity: sha512-2EmdH1YvIQiZpltCNgkuiUnyukzxM/R6NDJX31Ke3BG1Nq5b0S2PhX59UKi9vZpPDQVdqn+1IcaAwnzTT5vCjw==}
     engines: {node: '>= 0.4'}
@@ -2236,8 +2241,8 @@ packages:
       semver: 7.3.8
     dev: false
 
-  /node-sql-parser/4.6.5:
-    resolution: {integrity: sha512-gX+zTvmUjJZolQEQ6Am3OU3PgBIOptpaAscW93eNM2rkKySB9fdEC6+2Sn7oUmnnZL/oWLzEVZQG4uTN6zRUXg==}
+  /node-sql-parser/4.10.0:
+    resolution: {integrity: sha512-P4LZNX8drf+0X5zPtcE5o1SV7Wn4VpTGSYOnN8uY+TswtHrg3ymb193tYpF8EMp2LhGqqDUqTAnCr8hqjN3uQw==}
     engines: {node: '>=8'}
     dependencies:
       big-integer: 1.6.51
@@ -2448,16 +2453,16 @@ packages:
       synckit: 0.8.5
     dev: true
 
-  /prettier-plugin-sql/0.13.0_prettier@2.8.4:
-    resolution: {integrity: sha512-Ui9603tDD6PFyr7JvIEoE6cIFMQnJVDriG+oLyVThsGo/MIl5ek18JhH3xtox9ux8jvyww/FUFrJzxpZ7FIdvw==}
-    engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
+  /prettier-plugin-sql/0.15.1_prettier@2.8.4:
+    resolution: {integrity: sha512-CWYgo4dXDhjA6ofvC6yUjsEOSzb5qdLmaloK8V+mPiSjkvMbatWsSTKjkV2g4k17shtqYmnU+WWOaYpFNbNL1A==}
+    engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
-      prettier: ^2.0.0
+      prettier: ^3.0.0
     dependencies:
-      node-sql-parser: 4.6.5
+      node-sql-parser: 4.10.0
       prettier: 2.8.4
-      sql-formatter: 11.0.2
-      tslib: 2.5.0
+      sql-formatter: 12.2.4
+      tslib: 2.6.2
     dev: true
 
   /prettier/2.8.4:
@@ -2714,11 +2719,12 @@ packages:
     resolution: {integrity: sha512-XkD+zwiqXHikFZm4AX/7JSCXA98U5Db4AFd5XUg/+9UNtnH75+Z9KxtpYiJZx36mUDVOwH83pl7yvCer6ewM3w==}
     dev: true
 
-  /sql-formatter/11.0.2:
-    resolution: {integrity: sha512-6QumAdGHEnI5dXEq1d0aBRP876AyA9Wp/UE7wopKNA2Mp9sKGRKVqGgoWHk4dr0J0nceesC85Y0p36qmGoNqhw==}
+  /sql-formatter/12.2.4:
+    resolution: {integrity: sha512-Qj45LEHSfgrdYDOrAtIkR8SdS10SWcqCIM2WZwQwMKF2v9sM0K2dlThWPS7eYCUrhttZIrU1WwuIwHk7MjsWOw==}
     hasBin: true
     dependencies:
       argparse: 2.0.1
+      get-stdin: 8.0.0
       nearley: 2.20.1
     dev: true
 
@@ -2890,6 +2896,10 @@ packages:
 
   /tslib/2.5.0:
     resolution: {integrity: sha512-336iVw3rtn2BUK7ORdIAHTyxHGRIHVReokCR3XjbckJMK7ms8FysBfhLR8IXnAgy7T0PTPNBWKiH514FOW/WSg==}
+    dev: true
+
+  /tslib/2.6.2:
+    resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
     dev: true
 
   /tsm/2.3.0:
