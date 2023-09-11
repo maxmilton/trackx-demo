@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@ekscss/plugin-prefix': 0.0.8
+  '@ekscss/plugin-prefix': 0.0.11
   '@types/better-sqlite3': 7.6.3
   '@types/node': 18.15.3
   '@typescript-eslint/eslint-plugin': 5.55.0
@@ -9,7 +9,7 @@ specifiers:
   astray: 1.1.1
   better-sqlite3: 7.6.2
   c8: 7.13.0
-  ekscss: 0.0.13
+  ekscss: 0.0.17
   esbuild: 0.17.12
   eslint: 8.36.0
   eslint-config-airbnb-base: 15.0.0
@@ -35,14 +35,14 @@ dependencies:
   trackx-api: link:../trackx/packages/trackx-api
 
 devDependencies:
-  '@ekscss/plugin-prefix': 0.0.8_ekscss@0.0.13
+  '@ekscss/plugin-prefix': 0.0.11_ekscss@0.0.17
   '@types/better-sqlite3': 7.6.3
   '@types/node': 18.15.3
   '@typescript-eslint/eslint-plugin': 5.55.0_342y7v4tc7ytrrysmit6jo4wri
   '@typescript-eslint/parser': 5.55.0_vgl77cfdswitgr47lm5swmv43m
   astray: 1.1.1
   c8: 7.13.0
-  ekscss: 0.0.13
+  ekscss: 0.0.17
   esbuild: 0.17.12
   eslint: 8.36.0
   eslint-config-airbnb-base: 15.0.0_eakrjjutlgqjxe5ydhtnd4qdmy
@@ -87,13 +87,13 @@ packages:
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
     dev: true
 
-  /@ekscss/plugin-prefix/0.0.8_ekscss@0.0.13:
-    resolution: {integrity: sha512-oEU1hSYyE4MgcQK66j0HC3EACZRIqDRVywpljqii1xbzaGq/wsrU2Jpp1juRBpyvHmzqdO1XJD9jL5Uhz0pWHA==}
+  /@ekscss/plugin-prefix/0.0.11_ekscss@0.0.17:
+    resolution: {integrity: sha512-rIry1LpVtejt8mAN0CkkCyD5uRkOCue2m/k3xIiKi9BtKbrC/4ykwaEHTlM+/QOm/6ncbySKaJjzrwqAjYyaTA==}
     peerDependencies:
-      ekscss: ^0.0.13
+      ekscss: ^0.0.17
     dependencies:
-      ekscss: 0.0.13
-      stylis: 4.1.3
+      ekscss: 0.0.17
+      stylis: 4.3.0
     dev: true
 
   /@esbuild/android-arm/0.15.18:
@@ -459,8 +459,8 @@ packages:
     resolution: {integrity: sha512-21cFJr9z3g5dW8B0CVI9g2O9beqaThGQ6ZFBqHfwhzLDKUxaqTIy3vnfah/UPkfOiF2pLq+tGz+W8RyCskuslw==}
     dev: true
 
-  /@types/stylis/4.0.2:
-    resolution: {integrity: sha512-wtckGuk1eXUlUz0Qb1eXHG37Z7HWT2GfMdqRf8F/ifddTwadSS9Jwsqi4qtXk7cP7MtoyGVIHPElFCLc6HItbg==}
+  /@types/stylis/4.2.0:
+    resolution: {integrity: sha512-n4sx2bqL0mW1tvDf/loQ+aMX7GQD3lc3fkCMC55VFNDu/vBOabO+LTIeXKM14xK0ppk5TUGcWRjiSpIlUpghKw==}
     dev: true
 
   /@typescript-eslint/eslint-plugin/5.55.0_342y7v4tc7ytrrysmit6jo4wri:
@@ -965,12 +965,12 @@ packages:
       esutils: 2.0.3
     dev: true
 
-  /ekscss/0.0.13:
-    resolution: {integrity: sha512-vn04jyRhoC+Q4eCmENJV+XUc8SjpAYZnMgb7eTf2IXeux6Gxq3+vfbEbkfiCHhn8vKKFyVpTD5dN2446PdWIyg==}
+  /ekscss/0.0.17:
+    resolution: {integrity: sha512-7M0ao22WceieZyKvBtHXkOmMxQ88QFN+UauU1cbHkLJ37D/Drx+l1hmh+X/zSqHeE/q3k8itk32ohN2UNh8REw==}
     dependencies:
-      '@types/stylis': 4.0.2
+      '@types/stylis': 4.2.0
       source-map: 0.8.0-beta.0
-      stylis: 4.1.3
+      stylis: 4.3.0
     dev: true
 
   /emoji-regex/8.0.0:
@@ -2791,8 +2791,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /stylis/4.1.3:
-    resolution: {integrity: sha512-GP6WDNWf+o403jrEp9c5jibKavrtLW+/qYGhFxFrG8maXhwTBI7gLLhiBb0o7uFccWN+EOS9aMO6cGHWAO07OA==}
+  /stylis/4.3.0:
+    resolution: {integrity: sha512-E87pIogpwUsUwXw7dNyU4QDjdgVMy52m+XEOPEKUn161cCzWjjhPSQhByfd1CcNvrOLnXQ6OnnZDwnJrz/Z4YQ==}
     dev: true
 
   /supports-color/5.5.0:
