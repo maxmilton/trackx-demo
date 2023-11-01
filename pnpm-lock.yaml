@@ -7,7 +7,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': 5.55.0
   '@typescript-eslint/parser': 5.55.0
   astray: 1.1.1
-  better-sqlite3: 7.6.2
+  better-sqlite3: 9.0.0
   c8: 7.13.0
   ekscss: 0.0.13
   esbuild: 0.17.12
@@ -30,7 +30,7 @@ specifiers:
   uvu: 0.5.6
 
 dependencies:
-  better-sqlite3: 7.6.2
+  better-sqlite3: 9.0.0
   trackx: link:../trackx/packages/trackx
   trackx-api: link:../trackx/packages/trackx-api
 
@@ -702,8 +702,8 @@ packages:
     resolution: {integrity: sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==}
     dev: false
 
-  /better-sqlite3/7.6.2:
-    resolution: {integrity: sha512-S5zIU1Hink2AH4xPsN0W43T1/AJ5jrPh7Oy07ocuW/AKYYY02GWzz9NH0nbSMn/gw6fDZ5jZ1QsHt1BXAwJ6Lg==}
+  /better-sqlite3/9.0.0:
+    resolution: {integrity: sha512-lDxQ9qg/XuUHZG6xzrQaMHkNWl37t35/LPB/VJGV8DdScSuGFNfFSqgscXEd8UIuyk/d9wU8iaMxQa4If5Wqog==}
     requiresBuild: true
     dependencies:
       bindings: 1.5.0
