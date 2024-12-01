@@ -27,7 +27,7 @@
   "devDependencies": {
     "@ekscss/plugin-prefix": "0.0.8",
     "@types/better-sqlite3": "7.6.3",
-    "@types/node": "18.15.3",
+    "@types/node": "18.19.67",
     "@typescript-eslint/eslint-plugin": "5.55.0",
     "@typescript-eslint/parser": "5.55.0",
     "astray": "1.1.1",
