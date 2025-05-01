@@ -20,7 +20,7 @@ specifiers:
   magic-string: 0.30.0
   meriyah: 4.3.5
   prettier: 2.8.4
-  prettier-plugin-pkg: 0.17.1
+  prettier-plugin-pkg: 0.19.0
   prettier-plugin-sh: 0.12.8
   prettier-plugin-sql: 0.13.0
   trackx: ../trackx/packages/trackx
@@ -53,7 +53,7 @@ devDependencies:
   magic-string: 0.30.0
   meriyah: 4.3.5
   prettier: 2.8.4
-  prettier-plugin-pkg: 0.17.1_prettier@2.8.4
+  prettier-plugin-pkg: 0.19.0_prettier@2.8.4
   prettier-plugin-sh: 0.12.8_prettier@2.8.4
   prettier-plugin-sql: 0.13.0_prettier@2.8.4
   tsm: 2.3.0
@@ -2427,11 +2427,11 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /prettier-plugin-pkg/0.17.1_prettier@2.8.4:
-    resolution: {integrity: sha512-XPRRMQR5oseJXdfK8kQDj2LCV1UjmTuDlPbbJ8C2WLaATNhdvZLhQO0+NtWnRrQTP+erLR5cVxfcwyqF+3R8SA==}
-    engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
+  /prettier-plugin-pkg/0.19.0_prettier@2.8.4:
+    resolution: {integrity: sha512-wlBvVhAZQ+iOH8/4gWc1SxJbf5++xwKmnFkqHYUsmoQIg6hgdyL1055Z9FOWa6cumqL/QwqdOzY9aH4McdjKyw==}
+    engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
-      prettier: ^2.0.0
+      prettier: ^3.0.3
     dependencies:
       prettier: 2.8.4
     dev: true
