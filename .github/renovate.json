@@ -1,5 +1,11 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["github>maxmilton/renovate-config", "github>maxmilton/renovate-config:monthly"],
+  "extends": [
+    "config:best-practices",
+    "config:js-app",
+    "github>maxmilton/renovate-config",
+    "github>maxmilton/renovate-config:auto",
+    "schedule:monthly"
+  ],
   "enabled": false
 }
